@@ -19,9 +19,10 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
 
-      .main h2 {
+      h2 {
+        text-align: center;
         font-size: 24px;
-        color: DarkRed;
+        color: Black;
         margin-bottom: 20px;
       }
 
@@ -58,7 +59,10 @@
       input[type="submit"]:hover {
         background-color: #333;
       }
-
+      .main {
+        z-index: -999;
+        margin-top: 50px;
+      }
       body {
         background-image: url("{% static 'wall.jpg' %}");
         background-attachment: fixed;
@@ -66,41 +70,42 @@
     </style>
   </head>
   <body>
+    <h2>Please enter the following values:</h2>
     <div class="main">
-      <h2>Please enter the following values:</h2>
+      <br />
       <form action="/predict/result" method="GET">
         <div class="row">
           <div class="col-sm-4" style="background-color: Bisque">
             <p>Avg.Area Income</p>
-            <input type="text" name="n1" />
+            <input type="text" name="n1" pattern="[0-9]+" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-4" style="background-color: LightPink">
             <p>Avg.Area House Age</p>
-            <input type="text" name="n2" />
+            <input type="text" name="n2" pattern="[0-9]+" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-4" style="background-color: Turquoise">
             <p>Avg.Area Number of Rooms</p>
-            <input type="text" name="n3" />
+            <input type="text" name="n3" pattern="[0-9]+" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-4" style="background-color: Yellow">
             <p>Avg.Area Number of Bedrooms</p>
-            <input type="text" name="n4" />
+            <input type="text" name="n4" pattern="[0-9]+" required />
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-4" style="background-color: RosyBrown">
             <p>Avg.Area Population</p>
-            <input type="text" name="n5" />
+            <input type="text" name="n5" pattern="[0-9]+" required />
           </div>
         </div>
 
@@ -110,7 +115,7 @@
       </form>
 
       <div class="row">
-        <h2 style="text-align: center">{{result2}}</h2>
+        <h2>{{result2}}</h2>
       </div>
     </div>
   </body>
