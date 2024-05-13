@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-image: url("{% static 'img.jpg' %}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    h2 {
+      margin-top: 150px;
+      font-size: 40px;
+      color: #fff;
+    }
+    h1 {
+      font-size: 60px;
+      color: #fff;
+    }
+    input[type="submit"] {
+      background-color: #000000;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <h2>WELCOME TO</h2>
+    <h1>HOUSE PRICE PREDICTIONS SYSTEM</h1>
+    <form action="predict">
+      <input type="submit" value="START" />
+    </form>
+  </body>
+</html>
