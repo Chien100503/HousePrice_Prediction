@@ -5,6 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{% static 'logo.png' %}" />
     <title>Home</title>
   </head>
   <style>
@@ -30,11 +31,14 @@
       font-size: 20px;
       font-weight: bold;
       padding: 20px;
+      border-radius: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #333333;
     }
   </style>
   <body>
     <h2>WELCOME TO</h2>
-    <h1>HOUSE PRICE PREDICTIONS SYSTEM</h1>
     <form action="predict">
       <input type="submit" value="START" />
     </form>
